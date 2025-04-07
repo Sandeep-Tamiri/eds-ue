@@ -1,4 +1,4 @@
--eds{
+{
   "mappings": [
     "/content/eds-site/:/",
     "/content/eds-site/configuration:/.helix/config.json",
