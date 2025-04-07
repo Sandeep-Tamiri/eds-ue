@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p12078-e101913.adobeaemcloud.com/bin/franklin.delivery/sandeep-tamiri/eds-ue/main"
+    url: "https://author-p12078-e101913-test.adobeaemcloud.com/bin/franklin.delivery/sandeep-tamiri/eds-ue/main"
     type: "markup"
     suffix: ".html"
