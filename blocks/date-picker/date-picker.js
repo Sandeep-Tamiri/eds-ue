@@ -19,7 +19,8 @@ function extractConfig(rows) {
 
   rows.forEach((cells) => {
     if (cells.length === 1 && !config.label) {
-      config.label = cells[0];
+      const [label] = cells;
+      config.label = label;
       return;
     }
 
@@ -38,7 +39,9 @@ function extractConfig(rows) {
 }
 
 export default function decorate(block) {
-  const rows = [...block.children].map((row) => [...row.children].map((cell) => cell.textContent.trim()));
+  const rows = [...block.children].map((row) => (
+    [...row.children].map((cell) => cell.textContent.trim())
+  ));
   const config = extractConfig(rows);
   const today = formatToday();
   const defaultValue = normalize(config.value);
