@@ -214,5 +214,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "date-picker",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Published Date"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "helper",
+        "label": "Helper Text"
+      }
+    ]
   }
 ]
