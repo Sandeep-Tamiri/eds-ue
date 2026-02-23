@@ -214,27 +214,5 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id": "card-collection",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "value": "",
-        "label": "Parent page path",
-        "valueType": "string",
-        "description": "Child pages will be shown as cards",
-        "validation": {
-          "rootPath": "/content"
-        }
-      },
-      {
-        "component": "boolean",
-        "name": "search",
-        "label": "Search",
-        "value": false
-      }
-    ]
   }
 ]
