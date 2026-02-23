@@ -1,0 +1,238 @@
+{
+  "definitions": [
+    {
+      "title": "Card Collection",
+      "id": "card-collection",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Card Collection",
+              "model": "card-collection",
+              "linkText": "Learn more",
+              "loadMoreText": "Show more",
+              "sortByTitleAscendingLabel": "A-Z",
+              "sortByTitleDescendingLabel": "Z-A",
+              "search": false,
+              "primaryFilter": false,
+              "secondaryFilter": false
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "card-collection",
+      "fields": [
+        {
+          "component": "tab",
+          "name": "tab-details",
+          "label": "Details"
+        },
+        {
+          "component": "boolean",
+          "name": "search",
+          "label": "Search",
+          "value": false
+        },
+        {
+          "component": "boolean",
+          "name": "primaryFilter",
+          "label": "Primary Filter",
+          "value": false
+        },
+        {
+          "component": "aem-tag",
+          "label": "Tag path picker",
+          "name": "primaryFilterTags",
+          "valueType": "string",
+          "condition": {
+            "===": [
+              {
+                "var": "primaryFilter"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "boolean",
+          "name": "secondaryFilter",
+          "label": "Secondary Filter",
+          "value": false
+        },
+        {
+          "component": "aem-tag",
+          "label": "Tag path picker",
+          "name": "secondaryFilterTags",
+          "valueType": "string",
+          "condition": {
+            "===": [
+              {
+                "var": "secondaryFilter"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "aem-content",
+          "name": "reference",
+          "value": "",
+          "label": "Parent page path",
+          "valueType": "string",
+          "description": "Child pages will be shown as cards",
+          "validation": {
+            "rootPath": "/content"
+          }
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "Card link text",
+          "valueType": "string",
+          "value": "Learn more",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "loadMoreText",
+          "label": "Load more button label",
+          "valueType": "string",
+          "value": "Show more",
+          "required": true
+        },
+        {
+          "component": "tab",
+          "name": "tab-sorting",
+          "label": "Sorting"
+        },
+        {
+          "component": "boolean",
+          "name": "sortByOrderValue",
+          "label": "Sort by order value",
+          "value": false
+        },
+        {
+          "component": "text",
+          "name": "sortByOrderLabel",
+          "label": "Sort by order label",
+          "valueType": "string",
+          "value": "",
+          "description": "This will appear in the sort button (Most popular, etc.)",
+          "condition": {
+            "===": [
+              {
+                "var": "sortByOrderValue"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "boolean",
+          "name": "sortByCreatedDateAscending",
+          "label": "Sort by created date - Ascending",
+          "value": false
+        },
+        {
+          "component": "text",
+          "name": "sortByCreatedDateAscendingLabel",
+          "label": "Sort by created date - Ascending label",
+          "valueType": "string",
+          "value": "",
+          "description": "This will appear in the sort button (New partners, Most recent, etc.)",
+          "condition": {
+            "===": [
+              {
+                "var": "sortByCreatedDateAscending"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "boolean",
+          "name": "sortByCreatedDateDescending",
+          "label": "Sort by created date - Descending",
+          "value": false
+        },
+        {
+          "component": "text",
+          "name": "sortByCreatedDateDescendingLabel",
+          "label": "Sort by created date - Descending label",
+          "valueType": "string",
+          "value": "",
+          "description": "This will appear in the sort button (Old partners, etc.)",
+          "condition": {
+            "===": [
+              {
+                "var": "sortByCreatedDateDescending"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "boolean",
+          "name": "sortByTitleAscending",
+          "label": "Sort by alphabetically - Ascending",
+          "value": false
+        },
+        {
+          "component": "text",
+          "name": "sortByTitleAscendingLabel",
+          "label": "Sort by alphabetically - Ascending label",
+          "valueType": "string",
+          "value": "A-Z",
+          "condition": {
+            "===": [
+              {
+                "var": "sortByTitleAscending"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "boolean",
+          "name": "sortByTitleDescending",
+          "label": "Sort by alphabetically - Descending",
+          "value": false
+        },
+        {
+          "component": "text",
+          "name": "sortByTitleDescendingLabel",
+          "label": "Sort by alphabetically - Descending label",
+          "valueType": "string",
+          "value": "Z-A",
+          "condition": {
+            "===": [
+              {
+                "var": "sortByTitleDescending"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "tab",
+          "name": "tab-analytics",
+          "label": "Analytics"
+        },
+        {
+          "component": "text",
+          "name": "analyticsId",
+          "label": "Campaign code",
+          "valueType": "string",
+          "value": "",
+          "description": "This will appear in analytics reports so choose something succinct and meaningful"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
