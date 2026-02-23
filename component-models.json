@@ -234,22 +234,6 @@
         "name": "search",
         "label": "Search",
         "value": false
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Card link text",
-        "valueType": "string",
-        "value": "Learn more",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "loadMoreText",
-        "label": "Load more button label",
-        "valueType": "string",
-        "value": "Show more",
-        "required": true
       }
     ]
   }
